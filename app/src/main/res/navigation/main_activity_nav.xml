@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notDetayGecis"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.ToDoAplicationOdev.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/notKayitGecis"
+            app:destination="@id/notKayitFragment" />
+        <action
+            android:id="@+id/notDetayGecis"
+            app:destination="@id/notDetayFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/notKayitFragment"
+        android:name="com.example.ToDoAplicationOdev.ui.fragment.NotKayitFragment"
+        android:label="fragment_not_kayit"
+        tools:layout="@layout/fragment_not_kayit" />
+    <fragment
+        android:id="@+id/notDetayFragment"
+        android:name="com.example.ToDoAplicationOdev.ui.fragment.NotDetayFragment"
+        android:label="fragment_not_detay"
+        tools:layout="@layout/fragment_not_detay">
+        <argument
+            android:name="not"
+            app:argType="com.example.ToDoAplicationOdev.data.entity.Notlar" />
+    </fragment>
+</navigation>
